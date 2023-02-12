@@ -1,14 +1,18 @@
-// const person: {
-//   name: string;
-//   age: number;
-// } = {
-//   name: 'Maximilian',
-//   age: 30
-// }
+let userInput: unknown;
+let userName: string;
 
-const person = {
-  name: 'Maximilian',
-  age: 30
+userInput = 1;
+userInput = "String"
+// userInput = () => { console.log("test") }
+
+// userName = userInput;
+if (typeof userInput === 'string') {
+  userName = userInput;
 }
 
-console.log(person.age)
+function generateError(message: string, code: number): never {
+  throw { message: message, errorCode: code };
+}
+
+const result = generateError('An error occurred!', 400);
+console.log(result)

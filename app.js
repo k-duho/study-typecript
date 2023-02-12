@@ -1,15 +1,14 @@
-function add(num1, num2, printResult, phrase) {
-    var result = num1 + num2;
-    if (printResult) {
-        console.log(phrase + result);
-    }
-    else {
-        return result;
-    }
+var userInput;
+var userName;
+userInput = 1;
+userInput = "String";
+// userInput = () => { console.log("test") }
+// userName = userInput;
+if (typeof userInput === 'string') {
+    userName = userInput;
 }
-var number1 = 5;
-var number2 = 2.8;
-var printResult = true;
-var resultPhrase = 'result is';
-var result = add(number1, number2, printResult, resultPhrase);
+function generateError(message, code) {
+    throw { message: message, errorCode: code };
+}
+var result = generateError('An error occurred!', 400);
 console.log(result);
